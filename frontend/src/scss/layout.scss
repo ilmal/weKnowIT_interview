@@ -1,0 +1,38 @@
+.header{
+    width: 100vw;
+    min-height: 10vh;
+    background-color: coral;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .languages{
+        
+    }
+
+    .pages{
+        a{
+            text-decoration: none !important;
+            color: black;
+        }
+    }
+}
+
+.footer{
+    height: 10vh;
+    width: 100vw;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

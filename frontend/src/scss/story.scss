@@ -1,0 +1,30 @@
+.story{
+    margin: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    p{
+        margin: 5vw 0;
+        user-select: none;
+    }
+
+    .hide_text{
+        opacity: 0;
+    }
+
+    .loading_message{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .loading_message_main{
+            font-size: 1.2rem;
+            margin-top: 10vh;
+            margin-bottom: 0;
+        }
+        .loading_message_inner{
+            font-size: .8rem;
+            margin-top: .5rem;
+        }
+    }
+
+}
