@@ -1,0 +1,41 @@
+version: '3.5'
+services:
+  app:
+    build:
+      context: ./frontend    
+    ports:
+      - 3000:80
+    links:
+      - db
+      - backend
+    restart: unless-stopped
+    networks:
+      - weknowit-network
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - DATABASE_ADDRESS=db
+    ports:
+      - 5000:5000
+    networks:
+      - weknowit-network
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: weknowit
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: weknowit
+      PGDATA: /data/postgres
+      PGPORT: 5432
+    volumes:
+       - ./postgres:/data/postgres
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    networks:
+      - weknowit-network
+networks:
+  weknowit-network:

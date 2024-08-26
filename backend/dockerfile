@@ -1,13 +1,10 @@
-FROM python:3.9-slim
+FROM python:3.9
 
 WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip3 install --upgrade pip
-RUN pip3 install -r requirements.txt
-RUN pip3 install httpx==0.26.0 h11==0.14.0 httpcore==1.0.5
-
+RUN pip install -r requirements.txt
 COPY . .
 
 ENV PYTHONWARNINGS="ignore"

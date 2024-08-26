@@ -2,11 +2,11 @@
 
 const NoPage = () => {
     return (
-        <>
+        <div className="noPage">
             <p>
-                This page does not exist! Please try another url!
+                This page does not exist! Please check your URL!
             </p>
-        </>
+        </div>
     )
 }
 

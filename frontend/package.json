@@ -16,7 +16,7 @@
     "scripts": {
         "dev": "BROWSER=none REACT_APP_BACKEND_URL=http://127.0.0.1:5000 react-scripts start",
         "start": "react-scripts start",
-        "build": "REACT_APP_BACKEND_URL=http://nils.u1.se:30159 react-scripts build",
+        "build": "REACT_APP_BACKEND_URL=http://127.0.0.1:5000 react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
